@@ -29,15 +29,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-import userRoute from "./routes/user.route.js";
-import postRoute from "./routes/post.route.js";
-import commentRoute from "./routes/comment.route.js"; 
-
-app.use("/api/user", userRoute);
-app.use("api/post", postRoute);
-app.use("api/comment", commentRoute); 
-
-
+ 
 app.use("/api", mainRoute);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
